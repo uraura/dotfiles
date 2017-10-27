@@ -1,0 +1,13 @@
+#!/bin/bash
+
+MAS_CMD=/brew/bin/mas
+
+app="$@"
+[ -z "$app" ] && { echo 'no application specified'; exit 1; }
+
+apps="$($MAS_CMD search "$app")"
+[ $(echo "$apps" | wc -l) -gt 1 ] && { echo 'more than 1 apps found'; exit 1; }
+
+read -r id name <<<$(echo $apps)
+echo "installing $name"
+$MAS_CMD install $id

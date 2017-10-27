@@ -1,0 +1,13 @@
+# ignore everything
+/bin/**
+/.config/**
+
+# unignore
+!/bin/cask
+!/bin/mas-install
+
+!/.config/karabiner
+!/.config/karabiner/karabiner.json
+!/.config/karabiner/assets
+!/.config/karabiner/assets/complex_modifications
+!/.config/karabiner/assets/complex_modifications/my_*.json

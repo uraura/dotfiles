@@ -1,0 +1,5 @@
+[credential]
+	helper = osxkeychain
+[user]
+	email = t@urau.la
+	name = uraura
