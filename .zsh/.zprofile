@@ -1,2 +1,2 @@
-typeset -U path
-path=(~/bin $path[@])
+typeset -U path PATH
+path=(~/.dotfiles/bin ~/bin $path[@])
