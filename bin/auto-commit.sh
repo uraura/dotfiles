@@ -9,7 +9,8 @@ emojis=("😀" "😃" "😄" "😁" "😆" "😅" "😂" "🤣" "☺️" "😊" 
 emoji=${emojis[$((RANDOM%${#emojis[*]}))]}
 
 notify() {
-  osascript -e 'display notification "failed to push GitHub"'
+  osascript -e 'display notification "failed to save dotfiles." with title "🆘 "'
+  exit 1
 }
 
 trap 'notify' ERR
