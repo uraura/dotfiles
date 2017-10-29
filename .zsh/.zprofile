@@ -12,3 +12,7 @@ export MANPATH=$(brew --prefix)/opt/coreutils/libexec/gnuman:$(manpath)
   alias ll='ls -l --color=auto --almost-all --file-type --human-readable'
   alias mkdir='mkdir --parents'
 }
+
+[ -e $(brew --prefix)/bin/grep ] && {
+  alias grep='grep --with-filename --line-number'
+}
