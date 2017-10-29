@@ -1,7 +1,7 @@
 #!/bin/bash
 
 notify() {
-  osascript -e 'display notification "failed to save dotfiles." with title "🆘"'
+  osascript -e 'display notification "failed to update brew." with title "🆘"'
   exit 1
 }
 
