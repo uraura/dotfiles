@@ -9,4 +9,5 @@ export MANPATH=$(brew --prefix)/opt/coreutils/libexec/gnuman:$(manpath)
 
 [ ${path[(i)$(brew --prefix)/opt/coreutils/libexec/gnubin]} -le ${#path} ] && {
   alias ls='ls --color=auto --almost-all --file-type --human-readable'
+  alias ll='ls -l --color=auto --almost-all --file-type --human-readable'
 }
