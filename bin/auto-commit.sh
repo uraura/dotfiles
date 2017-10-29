@@ -1,5 +1,11 @@
 #!/bin/bash
 
 pushd $HOME/.dotfiles
+diff <(git status --short) /dev/null > /dev/null
+[ $? == 0 ] && exit 0
 
-#osascript -e 'display notification "fire!"'
+emojis=("😀" "😃" "😄" "😁" "😆" "😅" "😂" "🤣" "☺️" "😊" "😇" "🙂" "🙃" "😉" "😌" "😍" "😘" "😗" "😙" "😚" "😋" "😜" "😝" "😛" "🤑" "🤗" "🤓" "😎" "🤡" "🤠" "😏" "😒" "😞" "😔" "😟" "😕" "🙁" "☹️" "😣" "😖" "😫" "😩" "😤" "😠" "😡" "😶" "😐" "😑" "😯" "😦" "😧" "😮" "😲" "😵" "😳" "😱" "😨" "😰" "😢" "😥" "🤤" "😭" "😓" "😪" "😴" "🙄" "🤔" "🤥" "😬" "🤐" "🤢" "🤧" "😷" "🤒" "🤕" "😈" "👿" "👹" "👺" "💩" "👻" "💀" "☠️" "👽" "👾" "🤖" "🎃" "😺" "😸" "😹" "😻" "😼" "😽" "🙀" "😿" "😾")
+
+emoji=${emojis[$((RANDOM%${#emojis[*]}))]}
+git commit -am "$emoji"
+osascript -e "display notification \"fire! $emoji\""
