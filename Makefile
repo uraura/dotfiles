@@ -87,3 +87,4 @@ brew-maint:
 
 init:
 	@mkdir -p $(HOME)/Library/LaunchAgents
+.PHONY: init
