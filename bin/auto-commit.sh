@@ -9,7 +9,7 @@ emojis=("😀" "😃" "😄" "😁" "😆" "😅" "😂" "🤣" "☺️" "😊" 
 emoji=${emojis[$((RANDOM%${#emojis[*]}))]}
 
 notify() {
-  osascript -e 'display notification "failed to save dotfiles." with title "🆘 "'
+  osascript -e 'display notification "failed to save dotfilest." with title "🆘 "'
   exit 1
 }
 
