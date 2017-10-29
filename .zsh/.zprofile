@@ -11,6 +11,6 @@ function contains(ary, elm) {
   return [ ${ary[(i)$elm]} -le ${#ary} ]
 }
 
-[ ${path[(i)$(brew --prefix)/opt/coreutils/libexec/gnubin]} -le ${#path} ] && {
+[ contains($path, $(brew --prefix)/opt/coreutils/libexec/gnubin) ] && {
   alias ls='ls --color=auto --almost-all --file-type --human-readable'
 }
