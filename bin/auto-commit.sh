@@ -9,11 +9,11 @@ emojis=("😀" "😃" "😄" "😁" "😆" "😅" "😂" "🤣" "☺️" "😊" 
 emoji=${emojis[$((RANDOM%${#emojis[*]}))]}
 
 notify() {
-  osascript -e 'display notification "failed to save dotfilest." with title "🆘 "'
+  osascript -e 'display notification "failed to save dotfiles." with title "🆘 "'
   exit 1
 }
 
 trap 'notify' ERR
 git commit --all --message "$emoji"
 git push origin master
-osascript -e "display notification \"fire! $emoji\""
+osascript -e "display notification \"dotfiles saved!\" with title \"$emoji\""
