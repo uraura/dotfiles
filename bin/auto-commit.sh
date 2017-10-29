@@ -14,6 +14,7 @@ notify() {
 }
 
 trap 'notify' ERR
+git add --all
 git commit --all --message "$emoji"
 git push origin master
 osascript -e "display notification \"dotfiles saved!\" with title \"$emoji\""
