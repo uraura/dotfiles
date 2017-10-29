@@ -20,3 +20,8 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt extended_history
+
+{
+  f=$HOME/.zsh/nerd-fonts/bin/scripts/lib/i_all.sh
+  test -f $f && source $f
+}
