@@ -68,7 +68,7 @@ define BREW_MAINT_PLIST
     <key>StartCalendarInterval</key>
     <dict>
       <key>Hour</key>
-      <integer>3</integer>
+      <integer>5</integer>
       <key>Minute</key>
       <integer>0</integer>
     </dict>
