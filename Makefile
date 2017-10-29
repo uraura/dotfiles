@@ -2,7 +2,7 @@
 
 dotdir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-excludes := Makefile .gitignore
+excludes := Makefile .gitignore LICENSE .DS_Store
 deploy:
 	@for d in $(shell find $(dotdir) -type d -not -name .git -not -path '*/.git/*' -mindepth 1); do \
 		mkdir -p $(HOME)$${d#$(dotdir)}; \
