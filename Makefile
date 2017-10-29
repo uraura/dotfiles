@@ -52,3 +52,32 @@ ifeq ($(op), $(filter $(op), load reload))
 endif
 	launchctl list $(label)
 
+define BREW_MAINT_PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>$(label)</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>$(HOME)/.dotfiles/bin/brew-maint.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StartCalendarInterval</key>
+    <dict>
+      <key>Hour</key>
+      <integer>3</integer>
+      <key>Minute</key>
+      <integer>0</integer>
+    </dict>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+  </dict>
+</plist>
+endef
+export AUTO_COMMIT_PLIST
+watch: label := dotfiles.auto-commit
