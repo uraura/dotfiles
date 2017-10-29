@@ -6,3 +6,4 @@ fpath=(/opt/brew/completions/zsh $fpath)
 
 typeset -U manpath
 manpath=(~/opt/coreutils/libexec/gnuman $manpath)
+export MANPATH
