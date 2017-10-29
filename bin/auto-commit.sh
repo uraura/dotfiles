@@ -15,4 +15,5 @@ notify() {
 
 trap 'notify' ERR
 git commit --all --message "$emoji"
+git push origin master
 osascript -e "display notification \"fire! $emoji\""
