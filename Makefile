@@ -37,7 +37,6 @@ endef
 export AUTO_COMMIT_PLIST
 watch: label := dotfiles.auto-commit
 watch:
-	@mkdir -p $(HOME)/Library/LaunchAgents
 	@echo "$$AUTO_COMMIT_PLIST" > $(HOME)/Library/LaunchAgents/$(label).plist
 	@$(MAKE) _launchctl label=$(label)
 .PHONY: watch
@@ -79,5 +78,12 @@ define BREW_MAINT_PLIST
   </dict>
 </plist>
 endef
-export AUTO_COMMIT_PLIST
-watch: label := dotfiles.auto-commit
+export BREW_MAINT_PLIST
+brew-maint: label := dotfiles.brew-maint
+brew-maint:
+	@echo "$$BREW_MAINT_PLIST" > $(HOME)/Library/LaunchAgents/$(label).plist
+	@$(MAKE) _launchctl label=$(label)
+.PHONY: brew-maint
+
+init:
+	@mkdir -p $(HOME)/Library/LaunchAgents
