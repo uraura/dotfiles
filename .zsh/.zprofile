@@ -13,6 +13,6 @@ function contains() {
   return [ ${ary[(i)$elm]} -le ${#ary} ]
 }
 
-[ contains($path, $(brew --prefix)/opt/coreutils/libexec/gnubin) ] && {
+[ contains(${path[@]}, $(brew --prefix)/opt/coreutils/libexec/gnubin) ] && {
   alias ls='ls --color=auto --almost-all --file-type --human-readable'
 }
