@@ -4,4 +4,4 @@
 	email = t@urau.la
 	name = uraura
 [alias]
-	purge = !git branch --merged origin/master | xargs git branch -d
+	purge = !git branch --merged origin/master | \\grep -v '*' | xargs git branch -d
