@@ -3,7 +3,7 @@
 autoload -Uz compinit; compinit
 
 source <(antibody bundle <<EOF
-tjun/oedo.zsh
+sindresorhus/pure
 caarlos0/ports kind:path
 djui/alias-tips
 zsh-users/zsh-completions
