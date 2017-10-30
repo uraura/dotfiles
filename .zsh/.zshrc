@@ -27,3 +27,5 @@ setopt extended_history
   f=$HOME/.misc/nerd-fonts/bin/scripts/lib/i_all.sh
   test -f $f && source $f
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
