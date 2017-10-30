@@ -17,10 +17,16 @@ else
   alias mkdir='mkdir -p'
 fi
 
-[ -e $(brew --prefix)/bin/grep ] && {
+if [ -e $(brew --prefix)/bin/grep ]; then
   alias grep='grep --with-filename --line-number'
-}
+else
+  unalias grep
+fi
 
-[ -v TMUX ] && {
-  alias man=''
-}
+if [ -v TMUX ]; then
+  man() {
+    tmux split-window -v "man $1"
+  }
+else
+  unset -f man
+fi
