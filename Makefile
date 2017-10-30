@@ -41,16 +41,6 @@ watch:
 	@$(MAKE) _launchctl label=$(label)
 .PHONY: watch
 
-op ?= status
-_launchctl:
-ifeq ($(op), $(filter $(op), unload reload))
-	launchctl unload $(HOME)/Library/LaunchAgents/$(label).plist
-endif
-ifeq ($(op), $(filter $(op), load reload))
-	launchctl load $(HOME)/Library/LaunchAgents/$(label).plist
-endif
-	launchctl list $(label)
-
 define BREW_MAINT_PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -88,3 +78,13 @@ brew-maint:
 init:
 	@mkdir -p $(HOME)/Library/LaunchAgents
 .PHONY: init
+
+op ?= status
+_launchctl:
+ifeq ($(op), $(filter $(op), unload reload))
+	launchctl unload $(HOME)/Library/LaunchAgents/$(label).plist
+endif
+ifeq ($(op), $(filter $(op), load reload))
+	launchctl load $(HOME)/Library/LaunchAgents/$(label).plist
+endif
+	launchctl list $(label)
