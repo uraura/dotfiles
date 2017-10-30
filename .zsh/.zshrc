@@ -1,6 +1,7 @@
 # Created by newuser for 5.4.2
 
 autoload -Uz compinit; compinit
+autoload -U promptinit; promptinit
 
 source <(antibody bundle <<EOF
 sindresorhus/pure
@@ -12,6 +13,8 @@ zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
 EOF
 )
+
+prompt pure
 
 eval "$(direnv hook zsh)"
 
