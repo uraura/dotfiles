@@ -4,6 +4,7 @@ autoload -Uz compinit; compinit
 autoload -U promptinit; promptinit
 
 source <(antibody bundle <<EOF
+mafredri/zsh-async
 sindresorhus/pure
 caarlos0/ports kind:path
 djui/alias-tips
