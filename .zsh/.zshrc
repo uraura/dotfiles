@@ -1,8 +1,5 @@
 # Created by newuser for 5.4.2
 
-autoload -Uz compinit; compinit
-autoload -Uz promptinit; promptinit
-
 source <(antibody bundle <<EOF
 mafredri/zsh-async
 sindresorhus/pure
@@ -14,6 +11,9 @@ zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
 EOF
 )
+
+autoload -Uz compinit; compinit
+autoload -Uz promptinit; promptinit
 
 eval "$(direnv hook zsh)"
 
