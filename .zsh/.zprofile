@@ -22,7 +22,7 @@ fi
 
 if [ -v TMUX ]; then
   man() {
-    tmux split-window -v "man $1"
+    tmux split-window -v "man $@"
   }
 else
   typeset -f man && unfunction man
