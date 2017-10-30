@@ -1,7 +1,7 @@
 # Created by newuser for 5.4.2
 
 autoload -Uz compinit; compinit
-autoload -U promptinit; promptinit
+autoload -Uz promptinit; promptinit
 
 source <(antibody bundle <<EOF
 mafredri/zsh-async
