@@ -28,5 +28,5 @@ if [ -v TMUX ]; then
     tmux split-window -v "man $1"
   }
 else
-  unset -f man
+  unfunction man
 fi
