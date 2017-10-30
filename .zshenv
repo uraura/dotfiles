@@ -1,3 +1,7 @@
+typeset -U path PATH
+typeset -U fpath
+typeset -U MANPATH
+
 export ZDOTDIR=~/.zsh
 
 export LESS=' --RAW-CONTROL-CHARS '
