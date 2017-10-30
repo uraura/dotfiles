@@ -15,8 +15,6 @@ zsh-users/zsh-autosuggestions
 EOF
 )
 
-prompt pure
-
 eval "$(direnv hook zsh)"
 
 export HISTFILE=${HOME}/.zsh_history
