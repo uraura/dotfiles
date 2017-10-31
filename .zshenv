@@ -1,5 +1,5 @@
 typeset -U path PATH
-path=(~/.dotfiles/bin ~/bin ~/opt/coreutils/libexec/gnubin $path)
+path=(~/bin(N-/) ~/opt/coreutils/libexec/gnubin(N-/) $path)
 
 typeset -U fpath
 typeset -U MANPATH
