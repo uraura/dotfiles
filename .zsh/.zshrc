@@ -30,7 +30,7 @@ setopt extended_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [ ${path[(i)~/opt/coreutils/libexec/gnubin]} -le ${#path} ]; then
+if [ ${path[(i)$HOME/opt/coreutils/libexec/gnubin]} -le ${#path} ]; then
   alias ls='ls --color=auto --almost-all --file-type --human-readable'
   alias ll='ls -l --color=auto --almost-all --file-type --human-readable'
   alias mkdir='mkdir --parents'
@@ -40,7 +40,7 @@ else
   alias mkdir='mkdir -p'
 fi
 
-if [ -e ~/bin/grep ]; then
+if [ -e $HOME/bin/grep ]; then
   alias grep='grep --with-filename --line-number'
 else
   unalias grep
