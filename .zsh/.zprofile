@@ -1,10 +1,10 @@
-path=(~/.dotfiles/bin ~/bin $(~/bin/brew --prefix)/opt/coreutils/libexec/gnubin $path)
-
+typeset -U fpath
 fpath=(/opt/brew/completions/zsh $fpath)
 
-export MANPATH=$(brew --prefix)/opt/coreutils/libexec/gnuman:$(manpath)
+typeset -U MANPATH
+export MANPATH=~/opt/coreutils/libexec/gnuman:$(manpath)
 
-if [ ${path[(i)$(brew --prefix)/opt/coreutils/libexec/gnubin]} -le ${#path} ]; then
+if [ ${path[(i)~/opt/coreutils/libexec/gnubin]} -le ${#path} ]; then
   alias ls='ls --color=auto --almost-all --file-type --human-readable'
   alias ll='ls -l --color=auto --almost-all --file-type --human-readable'
   alias mkdir='mkdir --parents'
@@ -14,7 +14,7 @@ else
   alias mkdir='mkdir -p'
 fi
 
-if [ -e $(brew --prefix)/bin/grep ]; then
+if [ -e ~/bin/grep ]; then
   alias grep='grep --with-filename --line-number'
 else
   unalias grep
