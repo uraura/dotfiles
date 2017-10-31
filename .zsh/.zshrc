@@ -6,9 +6,9 @@ sindresorhus/pure
 caarlos0/ports kind:path
 djui/alias-tips
 zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
-zsh-users/zsh-autosuggestions
 EOF
 )
 
