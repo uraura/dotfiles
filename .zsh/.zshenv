@@ -1,5 +1,9 @@
+setopt no_global_rcs
+
 typeset -U path PATH
-path=(~/bin(N-/) ~/opt/coreutils/libexec/gnubin(N-/) $path)
+path=(/usr/local/bin /usr/bin /bin /usr/sbin /sbin)
+path=(~/bin ~/opt/coreutils/libexec/gnubin $path)
+path=(${^path}(N-/^W)) # must exist, must be directory, must have safe permission
 
 export ZDOTDIR=~/.zsh
 
