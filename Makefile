@@ -10,6 +10,7 @@ deploy:
 	@for f in $(shell find $(dotdir) -type f $(addprefix -not -name , $(excludes)) -not -path '*/.git/*'); do \
 		ln -sf $$f $(HOME)$${f#$(dotdir)}; \
 	done
+	@ln -sf $(HOME)/.zsh/.zshenv $(HOME)/.zshenv
 .PHONY: deploy
 
 define AUTO_COMMIT_PLIST
