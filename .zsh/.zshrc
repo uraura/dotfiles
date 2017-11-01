@@ -23,12 +23,15 @@ export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt extended_history
 
-{
-  f=$HOME/.misc/nerd-fonts/bin/scripts/lib/i_all.sh
-  test -f $f && source $f
+source_if_exists() {
+  local f=$1
+  [ -f $f ] && source $f
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source_if_exists $HOME/.misc/nerd-fonts/bin/scripts/lib/i_all.sh
+source_if_exists $HOME/.fzf.zsh
+
+alias dotmake='make --directory $HOME/.dotfiles'
 
 if [ ${path[(i)$HOME/opt/coreutils/libexec/gnubin]} -le ${#path} ]; then
   alias ls='ls --color=auto --almost-all --file-type --human-readable'
@@ -53,4 +56,3 @@ if [ -v TMUX ]; then
 else
   typeset -f man && unfunction man
 fi
-
