@@ -6,4 +6,4 @@
 [alias]
 	cut-away = !git branch --merged origin/master | \\grep -v '*' | xargs git branch -d
 [core]
-	excludesfile = /Users/uraura/.config/git/.gitignore
+	excludesfile = /Users/uraura/.config/git/.gitignore_global
