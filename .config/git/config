@@ -5,6 +5,6 @@
 	name = uraura
 [alias]
 	cut-away = !git branch --merged origin/master | \\grep -v '*' | xargs git branch -d
-	co = !git branch -a | fzf-tmux | xargs git checkout
+	co = !git branch -a | fzf-tmux -d 30% | xargs git checkout
 [core]
 	excludesfile = /Users/uraura/.config/git/.gitignore_global
