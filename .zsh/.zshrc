@@ -30,6 +30,8 @@ source_if_exists() {
 
 source_if_exists $HOME/.misc/nerd-fonts/bin/scripts/lib/i_all.sh
 source_if_exists $HOME/.fzf.zsh
+source_if_exists $HOME/opt/fzf/shell/key-bindings.zsh
+[[ $- == *i* ]] && source_if_exists $HOME/opt/fzf/shell/completion.zsh
 
 alias dotmake='make --directory $HOME/.dotfiles'
 
