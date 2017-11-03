@@ -56,7 +56,7 @@ if [ -v TMUX ]; then
     p=$(apropos ${1-.} \
     | fzf-tmux --preview-window=down:50% --preview 'echo {} cut -f1 -d"(" | xargs man' \
     | cut -f1 -d"(")
-    man $p
+    tmux split-window -v "man $p"
   }
 else
   typeset -f fman && unfunction fman
