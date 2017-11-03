@@ -59,5 +59,5 @@ if [ -v TMUX ]; then
     man $p
   }
 else
-  typeset -f man && unfunction man
+  typeset -f fman && unfunction fman
 fi
