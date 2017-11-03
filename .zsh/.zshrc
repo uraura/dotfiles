@@ -52,8 +52,8 @@ else
 fi
 
 if [ -v TMUX ]; then
-  man() {
-    p=$(apropos $1 \
+  fman() {
+    p=$(apropos ${1-.} \
     | fzf-tmux --preview-window=down:50% --preview 'echo {} cut -f1 -d"(" | xargs man' \
     | cut -f1 -d"(")
     man $p
