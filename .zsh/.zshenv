@@ -7,7 +7,7 @@ path=(${^path}(N-/^W)) # must exist, must be directory, must have safe permissio
 
 typeset -U fpath
 fpath=(~/share/zsh/site-functions /opt/brew/completions/zsh $fpath)
-path=(${^fpath}(N-/^W)) # must exist, must be directory, must have safe permission
+fpath=(${^fpath}(N-/^W)) # must exist, must be directory, must have safe permission
 
 export ZDOTDIR=~/.zsh
 
