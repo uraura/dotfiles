@@ -6,7 +6,7 @@ path=(~/bin ~/sbin ~/opt/coreutils/libexec/gnubin ~/.cargo/bin $path)
 path=(${^path}(N-/^W)) # must exist, must be directory, must have safe permission
 
 typeset -U fpath
-fpath=(~/share/zsh/site-functions /opt/brew/completions/zsh $fpath)
+fpath=(~/share/zsh/functions ~/share/zsh/site-functions /opt/brew/completions/zsh $fpath)
 fpath=(${^fpath}(N-/^W)) # must exist, must be directory, must have safe permission
 
 export ZDOTDIR=~/.zsh
