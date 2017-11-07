@@ -33,6 +33,8 @@ source_if_exists $HOME/.fzf.zsh
 source_if_exists $HOME/opt/fzf/shell/key-bindings.zsh
 [[ $- == *i* ]] && source_if_exists $HOME/opt/fzf/shell/completion.zsh
 
+command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
+
 alias dotmake='make --directory $HOME/.dotfiles'
 
 if [ ${path[(i)$HOME/opt/coreutils/libexec/gnubin]} -le ${#path} ]; then
