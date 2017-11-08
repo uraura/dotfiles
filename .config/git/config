@@ -11,3 +11,8 @@
 	root = rev-parse --show-toplevel
 [core]
 	excludesfile = /Users/uraura/.config/git/.gitignore_global
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
