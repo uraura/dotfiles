@@ -63,3 +63,5 @@ if [ -v TMUX ]; then
 else
   typeset -f fman && unfunction fman
 fi
+
+alias reload='exec zsh -l'
