@@ -11,6 +11,8 @@ set number
 set relativenumber
 set cursorline
 set cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 set virtualedit=onemore
 set smartindent
 set visualbell
