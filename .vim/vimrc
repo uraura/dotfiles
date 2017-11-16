@@ -3,7 +3,6 @@ syntax on
 set directory=/tmp
 set fenc=utf-8
 set nobackup
-set noswapfile
 set autoread
 set hidden
 set showcmd
@@ -22,3 +21,9 @@ set wildmode=list:longest
 
 nnoremap j gj
 nnoremap k gk
+
+augroup vimrc-auto-cursorline
+  autocmd!
+  autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
+  autocmd CursorHold,CursorHoldI * setlocal cursorline
+augroup END
