@@ -25,5 +25,5 @@ nnoremap k gk
 augroup vimrc-auto-cursorline
   autocmd!
   autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline nocursorcolumn
-  autocmd CursorHold,CursorHoldI * setlocal cursorline nocursorcolumn
+  autocmd CursorHold,CursorHoldI * setlocal cursorline cursorcolumn
 augroup END
