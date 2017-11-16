@@ -3,7 +3,7 @@ if &compatible
 endif
 let s:dein_dir = expand('~/src/github.com/Shougo/dein.vim')
 let s:plugin_dir = expand('~/.vim/plugins')
-set runtimepath+=s:dein_dir
+set runtimepath+=~/src/github.com/Shougo/dein.vim
 if dein#load_state(s:plugin_dir)
   call dein#begin(s:plugin_dir)
 
