@@ -1,3 +1,19 @@
+if &compatible
+  set nocompatible
+endif
+let s:dein_dir = expand('~/src/github.com/Shougo/dein.vim')
+let s:plugin_dir = expand('~/.vim/plugins')
+set runtimepath+=s:dein_dir
+if dein#load_state(s:plugin_dir)
+  call dein#begin(s:plugin_dir)
+
+  call dein#add(s:dein_dir)
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
 syntax on
 
 set directory=/tmp
