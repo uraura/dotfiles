@@ -4,7 +4,7 @@
 	email = t@urau.la
 	name = uraura
 [alias]
-	cut-away = !git branch --merged origin/master | \\grep -v '*' | xargs git branch -d
+	snip = !git branch --merged origin/master | \\grep -v '*' | xargs git branch -d
 	ch = !git branch -a | fzf-tmux -d 30% | xargs git checkout
 	co = commit
 	fe = fetch -p
