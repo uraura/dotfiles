@@ -4,10 +4,6 @@
 	email = t@urau.la
 	name = uraura
 [alias]
-	snip = !git branch --merged origin/master | \\grep -v '*' | xargs git branch -d
-	ch = !git branch -a | fzf-tmux -d 30% | xargs git checkout
-	co = commit
-	fe = fetch -p
 	root = rev-parse --show-toplevel
 [core]
 	excludesfile = /Users/uraura/.config/git/.gitignore_global
