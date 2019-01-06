@@ -45,12 +45,6 @@ else
   alias mkdir='mkdir -p'
 fi
 
-if [ -e $HOME/bin/grep ]; then
-  alias grep='grep --with-filename --line-number'
-else
-  unalias grep
-fi
-
 if [ -v TMUX ]; then
   fman() {
     p=$(apropos ${1-.} \
